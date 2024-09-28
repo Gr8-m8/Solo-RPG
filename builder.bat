@@ -1,0 +1,1 @@
+venv\Scripts\python.exe -m PyInstaller main.py -n "SoloRPG" --onefile --collect-submodules "menu.py" --collect-submodules "saver.py" --collect-submodules "textefficiency.py"
