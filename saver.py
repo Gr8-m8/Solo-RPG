@@ -4,11 +4,13 @@ import os
 #simplify json save/load
 class Saver:
     def __init__(self):
-        os.makedirs("data/save", exist_ok=True)
+        os.makedirs(Saver.PATH, exist_ok=True)
 
-    PATH_ALARMS = f"data/save/alarms.json"
+    PATH = "Data/Tables/"
     
-    def save(self, path, content):
+    @staticmethod
+    def Save(path, content):
+        #print(f"Saver {path}:{json.dumps(content)}")
         try:
             open(path, "x")
         except:
@@ -21,7 +23,8 @@ class Saver:
         except:
             pass
 
-    def load(self, path):
+    @staticmethod
+    def Load(path):
         content = None
         try:
             save_file = open(path, "r")
@@ -34,3 +37,5 @@ class Saver:
                 pass
             
         return content
+    
+Saver()
