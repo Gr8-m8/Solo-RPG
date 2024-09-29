@@ -4,9 +4,9 @@ import os
 #simplify json save/load
 class Saver:
     def __init__(self):
-        os.makedirs(Saver.PATH, exist_ok=True)
+        os.makedirs(Saver.PATH_TABLES, exist_ok=True)
 
-    PATH = "Data/Tables/"
+    PATH_TABLES = "Data/Tables/"
     
     @staticmethod
     def Save(path, content):
