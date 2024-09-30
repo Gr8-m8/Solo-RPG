@@ -45,6 +45,7 @@ class Table:
             table = Table.Load(table_name.split('.')[0])
             tables[table_name.split('.')[0]] = table
 
+        Table.TABLES = tables
         return tables
 
 
