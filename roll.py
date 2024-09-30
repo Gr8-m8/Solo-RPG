@@ -12,6 +12,8 @@ class Dice:
         self.rolls.append(Dice.Roll(size=self.size, modifier=self.modifier, amount=self.amount, times=self.times))
         return self.rolls[-1]
 
+    LOG = []
+
     @staticmethod
     def Roll(size = 20, modifier = 0, amount = 1, times = 1):
         totalroll = [f"{amount}d{size}+{modifier}x{times}"]
@@ -28,4 +30,5 @@ class Dice:
             qtrolldesc+=f"{modifier}"
             totalroll.append([qtrolldesc, qtroll])
 
+        Dice.LOG.append(totalroll)
         return totalroll
