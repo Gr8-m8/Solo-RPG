@@ -27,6 +27,8 @@ class Table:
         #print(self.items[0])
         return {self.name: [self.name, self.desc, [item.toJSON() for item in self.items]]}
     
+    TABLES = []
+
     @staticmethod
     def Load(name):
         qimport = Saver.Load(f"{Saver.PATH_TABLES}/{name}.json")
