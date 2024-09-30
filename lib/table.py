@@ -1,6 +1,6 @@
-from textefficiency import text
-from saver import Saver
-from table_items import *
+from lib.textefficiency import text
+from lib.saver import Saver
+from lib.table_items import *
 import random as rng
 import os
 import json
